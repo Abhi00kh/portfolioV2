@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default background color */
+  color-scheme: light dark;
+  color: rgba(0, 255, 221, 0.87);
+  background-color: rgba(0, 0, 0, 0.82); 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInChild {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the entire section */
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Apply a slight delay for each child element */
+.animate-fadeInChild {
+  animation: fadeInChild 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-fadeInChild:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.animate-fadeInChild:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.animate-fadeInChild:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.animate-fadeInChild:nth-child(4) {
+  animation-delay: 1.2s;
+}
