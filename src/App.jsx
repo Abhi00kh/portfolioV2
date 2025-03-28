@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Projects from './Project';
 import Certifications from './Certifications';
 import Footer from './footer';
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
       <Certifications />
       <section id="contact"></section>
       <Footer />
+      <Analytics />
     </>
   );
 }
